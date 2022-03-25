@@ -13,16 +13,21 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> 홍종완입니다.</title>
+  <title> 북스메모리</title>
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!--<link href="css/font-awesome.min.css" rel="stylesheet" />-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
@@ -30,9 +35,70 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
 </head>
+<style>
+  .card-wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  .card-wrap img {
+    width: 100%;
+  }
+</style>
 
 <body>
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+          <!--end of col-->
+          <div class="col">
+            <input class="form-control form-control-lg form-control-borderless" type="search"
+              placeholder="책이름을 입력해주세요.">
+          </div>
+          <!--end of col-->
+          <div class="col-auto">
+            <button class="btn btn-lg btn-success" type="submit">검색</button>
+          </div>
+          <!--end of col-->
+        </div>
+      </div>
+      <!--end of col-->
+    </div>
 
+
+    <div class="row row-margin-bottom">
+      <div class="col-md-12 no-padding lib-item card-wrap" data-category="view">
+        <div class="lib-panel">
+          <div class="row box-shadow">
+            <div class="col-3">
+              <img class="lib-img-show" src="images/f1.png">
+            </div>
+            <div class="col-9">
+              <div class="lib-row lib-header">
+                책 제목
+                <div class="lib-header-seperator"></div>
+              </div>
+              <div class="lib-row lib-desc">
+                작가
+              </div>
+              <div class="lib-row lib-desc">
+                ★★★★★
+              </div>
+              <div class="lib-row lib-desc">
+                김영식입니다. 안녕하세요 오늘의 책 제목은 이거거거거거거거거거ㅓ거거걱.....
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
