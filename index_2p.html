@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <title> 북스메모리</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <!--<link href="css/font-awesome.min.css" rel="stylesheet" />-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<style>
+  .card-wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  .card-wrap img {
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+  }
+
+  .card-text {
+    margin-bottom: 0px;
+  }
+  .btn-show{
+    display: none;
+  }
+</style>
+<script>
+  function openClose(){
+    $("#savebook").show();
+    }
+</script>
+<body>
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+          <!--end of col-->
+          <div class="col">
+            <input class="form-control form-control-lg form-control-borderless" type="search"
+              placeholder="책이름을 입력해주세요.">
+          </div>
+
+          <!--end of col-->
+          <div class="col-auto">
+            <button class="btn btn-lg btn-success" type="submit">검색</button>
+          </div>
+          <!--end of col-->
+        </div>
+      </div>
+      <!--end of col-->
+    </div>
+
+    <div class="card-group card-wrap">
+
+      <div class="card">
+        <div><button onclick="openClose()" type="button" class="btn btn-dark float-right card-wrap">저장</button></div>
+        <img class="card-img-top" src="images/f1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">책 제목이 들어옵니다.</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.....</p>
+          <p class="card-text"><small class="text-muted">지훈초이</small></p>
+          <p class="card-text"><small class="text-muted">★★★★☆</small></p>
+          <p class="card-text"><small class="text-muted">849p</small></p>
+          <div id="savebook" class="btn-show">
+            <button type="button" class="btn btn-primary btn-lg">읽은책</button>
+            <button type="button" class="btn btn-secondary btn-lg">읽고싶은책</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
