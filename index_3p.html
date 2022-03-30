@@ -60,7 +60,25 @@
     margin-bottom: 5px;
   }
 
-  .btn-show {
+  .bookInfomation {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    background: #0000000a;
+    margin-top: 10px;
+  }
+
+  .save_book {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .btn {
+    margin-bottom: 7px;
+    margin-right: 10px;
+  }
+
+  .btn-changeShow {
     display: none;
     bottom: 0;
     position: fixed;
@@ -70,19 +88,29 @@
     background: #000000aa;
     padding: 25% 0;
   }
-
-  .save_book {
-    padding: 30px;
+  .btn-deleteShow {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
     text-align: center;
-  }
-  .btn{
-    margin-bottom: 7px;
-    margin-right: 10px;
+    left: 0;
+    background: #000000aa;
+    padding: 25% 0;
   }
 </style>
 <script>
-  function openClose() {
-    $("#savebook").show();
+  function open_change() {
+    $("#btn-change").show();
+  }
+  function close_change() {
+    $("#btn-change").hide();
+  }
+  function open_delete() {
+    $("#btn-delete").show();
+  }
+  function close_delete() {
+    $("#btn-delete").hide();
   }
 </script>
 
@@ -114,7 +142,10 @@
     <div class="card-group card-wrap">
 
       <div class="card">
-        <div><button onclick="openClose()" type="button" class="btn btn-dark float-right card-wrap">저장</button></div>
+        <div><button onclick="open_delete()" type="button" class="btn btn-dark float-right card-wrap">삭제</button>
+          <button onclick="open_change()" type="button"
+            class="btn btn-info float-right card-wrap btn-change">수정</button>
+        </div>
         <img class="card-img-top" src="images/f1.png" alt="Card image cap">
         <div class="save_book">
           <div class="card-body">
@@ -124,10 +155,21 @@
             <p class="card-text"><small class="text-muted">지훈초이</small></p>
             <p class="card-text"><small class="text-muted">★★★★☆</small></p>
             <p class="card-text"><small class="text-muted">849p</small></p>
-            <div id="savebook" class="btn-show">
-              <button type="button" class="btn btn-primary btn-lg">읽은책</button>
-              <button type="button" class="btn btn-secondary btn-lg">읽고싶은책</button>
+            <div id="bookInfomation" class="bookInfomation">
+              <button type="button" class="btn btn-primary btn-lg">책정보</button>
+              <button type="button" class="btn btn-secondary btn-lg">감상평</button>
             </div>
+            <div id="btn-change" class="btn-changeShow">
+              <button onclick="close_change()" type="button" class="btn btn-primary btn-lg">읽은책</button>
+              <button type="button" class="btn btn-secondary btn-lg">읽고싶은책</button>
+              <div class="text-light"> 2022.03.20 17:19</div>
+              <div class="text-light"> 평점을 남겨주세요 ★★★★☆</div>
+            </div>
+            <div id="btn-delete" class="btn-deleteShow">
+              <button type="button" class="btn btn-primary btn-lg">삭제</button>
+              <button onclick="close_delete()" type="button" class="btn btn-secondary btn-lg">되돌아가기</button>
+            </div>
+
           </div>
         </div>
       </div>

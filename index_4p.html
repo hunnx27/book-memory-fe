@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <title> 북스메모리</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <!--<link href="css/font-awesome.min.css" rel="stylesheet" />-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<style>
+  .card-wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  .card-wrap img {
+    width: 300px;
+    display: block;
+    margin: 0px auto 30px auto;
+  }
+
+  .card-text {
+    margin-bottom: 5px;
+  }
+
+  .bookInfomation {
+    text-align: center;
+    left: 0;
+    background: #0000000a;
+    margin-top: 10px;
+  }
+
+  .save_book {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .btn {
+    margin-bottom: 7px;
+    margin-right: 10px;
+  }
+
+  .btn-changeShow {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    background: #000000aa;
+    padding: 25% 0;
+  }
+  .btn-bookwrite{
+    display: none;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    background: #000000aa;
+    padding: 25% 0;
+  }
+
+  .btn-deleteShow {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    background: #000000aa;
+    padding: 25% 0;
+  }
+
+  .book_opinion {
+    display: none;
+  }
+  .opinion_back{
+    background: #0000000a;
+    margin-bottom: 10px;
+  }
+  .color2{
+    color: white;
+  }
+</style>
+<script>
+  function open_change() {
+    $("#btn-change").show();
+  }
+  function close_change() {
+    $("#btn-change").hide();
+  }
+  function open_delete() {
+    $("#btn-delete").show();
+  }
+  function close_delete() {
+    $("#btn-delete").hide();
+  }
+  function reading_opinion() {
+    $("#info-card").hide();
+    $("#my_opinion").show();
+    $("#info_btn").hide();
+    $("#opinion_btn").show();
+  }
+  function reading_info() {
+    $("#info-card").show();
+    $("#my_opinion").hide();
+    $("#info_btn").show();
+    $("#opinion_btn").hide();
+
+  }
+  function open_write(){
+    $("#btn-write").show();
+  }
+</script>
+
+<body>
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+          <!--end of col-->
+          <div class="col">
+            <input class="form-control form-control-lg form-control-borderless" type="search"
+              placeholder="책이름을 입력해주세요.">
+          </div>
+
+          <!--end of col-->
+          <div class="col-auto">
+            <button class="btn btn-lg btn-success" type="submit">검색</button>
+          </div>
+          <!--end of col-->
+        </div>
+      </div>
+      <!--end of col-->
+    </div>
+
+    <div class="card-group card-wrap">
+
+      <div class="card">
+        <div id="info_btn"><button onclick="open_delete()" type="button"
+            class="btn btn-dark float-right card-wrap">삭제</button>
+          <button onclick="open_change()" type="button"
+            class="btn btn-info float-right card-wrap btn-change">수정</button>
+        </div>
+        <div id="opinion_btn" class="book_opinion"><button onclick="open_write()" type="button"
+            class="btn btn-info float-right card-wrap btn-change">작성하기</button>
+        </div>
+
+        <div id="info-card" class="save_book">
+          <img class="card-img-top image_line" src="images/f1.png" alt="Card image cap">
+          <div inclass="card-body">
+            <h5 class="card-title">책 제목이 들어옵니다.</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.....</p>
+            <p class="card-text"><small class="text-muted">지훈초이</small></p>
+            <p class="card-text"><small class="text-muted">★★★★☆</small></p>
+            <p class="card-text"><small class="text-muted">849p</small></p>
+          </div>
+        </div>
+        <div id="my_opinion" class="book_opinion">
+          <div class="card w-auto opinion_back" >
+            <div class="card-body" >
+              <p class="card-text"><small class="text-muted">날짜</small></p>
+              <h5 class="card-title">책 제목</h5>
+              <p class="card-text">책에 대한 느낀점 첫줄 넣어주기.</p>
+            </div>
+          </div>
+          <div class="card w-auto opinion_back" >
+            <div class="card-body" >
+              <p class="card-text"><small class="text-muted">날짜</small></p>
+              <h5 class="card-title">책 제목</h5>
+              <p class="card-text">책에 대한 느낀점 첫줄 넣어주기.</p>
+            </div>
+          </div>
+          <div class="card w-auto opinion_back" >
+            <div class="card-body" >
+              <p class="card-text"><small class="text-muted">날짜</small></p>
+              <h5 class="card-title">책 제목</h5>
+              <p class="card-text">책에 대한 느낀점 첫줄 넣어주기.</p>
+            </div>
+          </div>
+        </div>
+        <div id="bookInfomation" class="bookInfomation">
+          <button onclick="reading_info()" type="button" class="btn btn-primary btn-lg">책정보</button>
+          <button onclick="reading_opinion()" type="button" class="btn btn-secondary btn-lg">감상평</button>
+        </div>
+        <div id="btn-change" class="btn-changeShow">
+          <button onclick="close_change()" type="button" class="btn btn-primary btn-lg">읽은책</button>
+          <button type="button" class="btn btn-secondary btn-lg">읽고싶은책</button>
+          <div class="text-light"> 2022.03.20 17:19</div>
+          <div class="text-light"> 평점을 남겨주세요 ★★★★☆</div>
+        </div>
+        <div id="btn-delete" class="btn-deleteShow">
+          <button type="button" class="btn btn-primary btn-lg">삭제</button>
+          <button onclick="close_delete()" type="button" class="btn btn-secondary btn-lg">되돌아가기</button>
+        </div>
+        <div id="btn-write" class="btn-bookwrite">
+          <form class="color2">
+            <div class="row mb-2">
+              <label for="inputEmail3" class="col-sm-3 col-form-label">페이지</label>
+              <div class="col-sm-2">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+            <div class="row mb-2">
+              <label for="inputEmail3" class="col-sm-3 col-form-label">태그</label>
+              <div class="col-sm-2">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label>생각 기록하기</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <fieldset class="row mb-3">
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    공개
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2">
+                    비공개
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">저장</button>
+          </form>
+
+          <!-- <button onclick="close_change()" type="button" class="btn btn-primary btn-lg">읽은책</button>
+          <button type="button" class="btn btn-secondary btn-lg">읽고싶은책</button> -->
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
